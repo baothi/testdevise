@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fristname: MyString
+  lastname: MyString
+  brithday: 2015-07-07 16:11:35
+
+two:
+  fristname: MyString
+  lastname: MyString
+  brithday: 2015-07-07 16:11:35

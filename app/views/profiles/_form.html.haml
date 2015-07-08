@@ -1,0 +1,18 @@
+= form_for @profile, html: { class: "form form-horizontal profile" } do |f|
+  .form-group
+    = f.label :fristname, class: 'control-label'
+    .controls
+      = f.text_field :fristname, class: 'form-control', required: true
+    = error_span(@profile[:fristname])
+  .form-group
+    = f.label :lastname, class: 'control-label'
+    .controls
+      = f.text_field :lastname, class: 'form-control', required: true
+    = error_span(@profile[:lastname])
+  .form-group
+    = f.label :brithday, class: 'control-label'
+    .controls
+      = f.datetime_select :brithday, class: 'form-control', required: true
+    = error_span(@profile[:brithday])
+  = f.submit nil,class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'
