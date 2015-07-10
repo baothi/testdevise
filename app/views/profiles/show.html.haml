@@ -14,7 +14,10 @@
   %strong= model_class.human_attribute_name(:brithday) + ':'
   %br
   = @profile.brithday
-
+%p
+  %strong= model_class.human_attribute_name(:image) + ':'
+  %br
+  = image_tag @profile.avatar_url(:thumb) if @profile.avatar?
 
 = link_to t('.back', :default => t("helpers.links.back")), profiles_path, :class => 'btn btn-default'
 = link_to t('.edit', :default => t("helpers.links.edit")), edit_profile_path(@profile), :class => 'btn btn-default'

@@ -14,5 +14,10 @@
     .controls
       = f.datetime_select :brithday, class: 'form-control', required: true
     = error_span(@profile[:brithday])
+  .form-group
+    = f.label :avatar, class: 'control-label'
+    .controls
+      = f.file_field :avatar
+    = f.error_span(:avatar)
   = f.submit nil,class: 'btn btn-primary'
   = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'

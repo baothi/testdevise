@@ -27,6 +27,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
+    @profile.avatar = params[:avatar]
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
@@ -41,15 +42,19 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    respond_to do |format|
+    # respond_to do |format|
       if @profile.update(profile_params)
+        if params[:profile][:avatar].present?
+          redirect_to @profile, notice: 'Profile was successfully updated.'
+        else
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
         format.json { render :show, status: :ok, location: @profile }
+      end
       else
         format.html { render :edit }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
-    end
+    # end
   end
 
   # DELETE /profiles/1
@@ -70,6 +75,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:fristname, :lastname, :brithday)
+      params.require(:profile).permit(:fristname, :lastname, :brithday,:avatar)
     end
 end

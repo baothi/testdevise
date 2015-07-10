@@ -50,3 +50,6 @@ gem "twitter-bootstrap-rails"
 gem 'devise'
 gem "nested_form"
 gem 'railsstrap'
+gem "rmagick"
+gem "carrierwave"
+
