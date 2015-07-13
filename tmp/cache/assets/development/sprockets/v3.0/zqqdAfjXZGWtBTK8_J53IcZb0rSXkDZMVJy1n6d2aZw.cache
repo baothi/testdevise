@@ -1,0 +1,20 @@
+I"ú(function() {
+  $(document).ready(function() {
+    var preview;
+    preview = $('.upload-preview img');
+    $('.file').change(function(event) {
+      var file_field, input, reader;
+      input = $(event.currentTarget);
+      file_field = input[0].files[0];
+      reader = new FileReader;
+      reader.onload = function(e) {
+        var image_base64;
+        image_base64 = e.target.result;
+        preview.attr('src', image_base64);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,23 +1,31 @@
 = form_for @profile, html: { class: "form form-horizontal profile" } do |f|
-  .form-group
-    = f.label :fristname, class: 'control-label'
-    .controls
-      = f.text_field :fristname, class: 'form-control', required: true
-    = error_span(@profile[:fristname])
-  .form-group
-    = f.label :lastname, class: 'control-label'
-    .controls
-      = f.text_field :lastname, class: 'form-control', required: true
-    = error_span(@profile[:lastname])
-  .form-group
-    = f.label :brithday, class: 'control-label'
-    .controls
-      = f.datetime_select :brithday, class: 'form-control', required: true
-    = error_span(@profile[:brithday])
-  .form-group
-    = f.label :avatar, class: 'control-label'
-    .controls
-      = f.file_field :avatar
-    = f.error_span(:avatar)
-  = f.submit nil,class: 'btn btn-primary'
-  = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'
+  .col-lg-6  
+    .form-group
+      = f.label :fristname, class: 'control-label'
+      .controls
+        = f.text_field :fristname, class: 'form-control', required: true
+      = error_span(@profile[:fristname])
+    .form-group
+      = f.label :lastname, class: 'control-label'
+      .controls
+        = f.text_field :lastname, class: 'form-control', required: true
+      = error_span(@profile[:lastname])
+    .form-group
+      = f.label :brithday, class: 'control-label'
+      .controls
+        = f.datetime_select :brithday, class: 'form-control', required: true
+      = error_span(@profile[:brithday])
+    / .form-group
+    /   = f.label :avatar, class: 'control-label'
+    /   .controls
+    /     = f.file_field :avatar
+    /   = f.error_span(:avatar)
+    
+  .col-lg-6
+    .upload-preview.round-image-51
+      %img/  
+    / %input
+    = f.file_field :avatar, :class => "file"
+  .col-lg-12
+    = f.submit nil,class: 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'

@@ -52,4 +52,3 @@ gem "nested_form"
 gem 'railsstrap'
 gem "rmagick"
 gem "carrierwave"
-
