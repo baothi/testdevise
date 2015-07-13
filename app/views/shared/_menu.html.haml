@@ -47,7 +47,8 @@
               - if current_user.profile && current_user.profile.avatar
                 .round-image-50= image_tag(current_user.profile.avatar.url(:thumb))
               -  else
-                .round-image-50 hinhanh
+                .round-image-50
+                  %img{:src => asset_path("mini_missing.png")}/
               %span.caret
             %ul.dropdown-menu
               %li= link_to "#{current_user.email}"

@@ -12738,3 +12738,188 @@ Processing by HomeController#index as HTML
   [1m[35mProfile Load (0.4ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT 1  [["user_id", 3]]
   Rendered shared/_menu.html.haml (3.5ms)
 Completed 200 OK in 141ms (Views: 139.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+  Rendered shared/_menu.html.haml (9.8ms)
+Completed 200 OK in 436ms (Views: 429.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-77d963462a71b85aa6c39f0110994006fed4301154d937da52eb3884ff813853.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-c1a8821f7eb1b195061d7706930814ecc6bd44db4c68f208da5fe14845fa11ea.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/profiles.self-35499e52e257fcc9154f1443be348224f81d290e1dab0182414efabc50a4bb32.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/registrations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/scaffolds.self-33bd55052808141e5b38600d3585cb417fee74ad33a52fdcdf63fdc86552b87f.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/application.self-d885a0a66bd595c10edb24f8879f94e334d88be0730c4d7c7a7b57c731c09037.css?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/jquery/dist/jquery.self-0664d02dcbfb008e715c754b00b9af29d6f1796828c03610aee4265bdfc6afff.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/bootstrap/dist/js/bootstrap.self-2bbd2c0465f01b1f8270958ddfc2e62a08915f295a35d22df2971eb936cf3c64.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-db278e3a8fa6249c16796b113ebd29e11ef4e2cd021618ed84895d524a4511e0.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-ab1767545e27c0dbd36971e656ae4927171f673e3d932cdec2cbef39e991952b.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-bd0c6724cdc75302fe98dfeff923112b76c1673cf4a0752a7050b7feea15594c.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-8bb9309b6c24a4ba6b94026a049d25b13bdc0553b6fe83255c14a715ba624cc4.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:18 +0700
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-d7f9330825307d053f68da11bb9ddc9b070df72deef3d115f2f3d55f66b17457.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-5d09995e01b647168888180d40e271f9a6759d68ae7ac029d7026af58813d376.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-a87553101c955a01e2e8c81fad69a16582ddbf58fe95d5eb335dde5567af7647.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-cd672ecad3b549e1dbd89bfd044e5812d6fdade56f42d48e3acee0c3f4614526.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-14e04bbe71282aa039322ab93e3a3a886ddede5f59a2f365f7c861f697bbeb21.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/bootstrap.self-9ad311a2517205eb4c427ffb1da4754a0a14eef615b4e0c92d2c27223c821fa7.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/registrations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2015-07-13 09:51:19 +0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-07-13 09:51:21 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (74.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (212.8ms)
+  Rendered shared/_menu.html.haml (0.4ms)
+Completed 200 OK in 455ms (Views: 324.3ms | ActiveRecord: 114.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-07-13 09:51:26 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0XypvBzHj34jm1m4Q7q+eZgf8Z3ZU2daR0MRKGXh08qkn7OEQS2kSmxCfWBWlMgPTBmxsguvPYM9on7orno/Qg==", "user"=>{"email"=>"baothi246@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (166.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "baothi246@gmail.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-07-10 06:15:03.310080"], ["current_sign_in_at", "2015-07-13 02:51:26.755825"], ["sign_in_count", 5], ["updated_at", "2015-07-13 02:51:26.757280"], ["id", 1]]
+  [1m[36m (23.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 455ms (ActiveRecord: 190.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 09:51:26 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (1.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered shared/_menu.html.haml (146.5ms)
+Completed 200 OK in 266ms (Views: 238.4ms | ActiveRecord: 26.8ms)
+
+
+Started DELETE "/users/sign_out?authenticity_token=Zm2HeOl12l%2Ftt4BjXumRupCOwSOLbM2PHkukB5ZGuaWIsp2ePJagJ7bkTs4fZn8yuWoIpsJmJUtY7O0amdBxbA%3D%3D" for 127.0.0.1 at 2015-07-13 09:51:33 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Zm2HeOl12l/tt4BjXumRupCOwSOLbM2PHkukB5ZGuaWIsp2ePJagJ7bkTs4fZn8yuWoIpsJmJUtY7O0amdBxbA=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 09:51:33 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  Rendered shared/_menu.html.haml (0.5ms)
+Completed 200 OK in 172ms (Views: 171.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-07-13 09:56:38 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (181.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (184.2ms)
+  Rendered shared/_menu.html.haml (6.3ms)
+Completed 200 OK in 1971ms (Views: 1970.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2015-07-13 09:56:43 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (130.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (134.1ms)
+  Rendered shared/_menu.html.haml (0.4ms)
+Completed 200 OK in 249ms (Views: 247.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-07-13 09:57:03 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vnr0Nc6sBexPdH1ZyauVOB+snqhWFZxwtENNG+81PJh9gSTF6nhGuP0OAAkGb1SR3ddQjiwGgWpAuFhtfhY0Qw==", "user"=>{"email"=>"baothi234@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'baothi234@gmail.com' LIMIT 1
+  [1m[36mSQL (17.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "baothi234@gmail.com"], ["encrypted_password", "$2a$10$ZPQZa.8bXjPF8LMkVGX31Oeo0UFpqMzUf8dxq3EtZxZtjHVy8I0Si"], ["created_at", "2015-07-13 02:57:04.103385"], ["updated_at", "2015-07-13 02:57:04.103385"]]
+  [1m[35m (20.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2015-07-13 02:57:04.143206"], ["current_sign_in_at", "2015-07-13 02:57:04.143206"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-07-13 02:57:04.144010"], ["id", 4]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 296ms (ActiveRecord: 47.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 09:57:04 +0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT 1[0m  [["user_id", 4]]
+  Rendered shared/_menu.html.haml (8.8ms)
+Completed 200 OK in 123ms (Views: 121.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/mini_missing-1a4fdfccdad1c0a3f5fab72838f753a6ced634b8c161932a78bba5c8673fdece.png" for 127.0.0.1 at 2015-07-13 09:57:04 +0700
