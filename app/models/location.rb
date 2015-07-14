@@ -1,3 +1,3 @@
 class Location < ActiveRecord::Base
-  has_many :profiles
+  belongs_to :profiles
 end

@@ -1,7 +1,10 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
-  belongs_to :location
+  has_many :locations
   mount_uploader :avatar, AvatarUploader
-  accepts_nested_attributes_for :location
+  accepts_nested_attributes_for :locations
   # attr_accessible :location_attributes
+   def to_s
+    address
+  end
 end

@@ -27,7 +27,7 @@
     / %input
     = f.file_field :avatar, :class => "file"
   .col-lg-12
-    = f.fields_for :location do |l|
+    = f.fields_for :locations do |l|
       .form-group
         = l.label :address, class: 'control-label'
         .controls
@@ -35,7 +35,7 @@
           = l.link_to_remove "Remove this location" 
         = f.error_span(:address)
   .col-lg-6
-    = f.link_to_add "Add a location", :location 
+    = f.link_to_add "Add a location", :locations 
   .col-lg-12
     = f.submit nil,class: 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'
