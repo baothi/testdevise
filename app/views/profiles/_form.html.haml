@@ -1,4 +1,4 @@
-= form_for @profile, html: { class: "form form-horizontal profile" } do |f|
+= nested_form_for @profile, html: { class: "form form-horizontal profile" } do |f|
   .col-lg-6  
     .form-group
       = f.label :fristname, class: 'control-label'
@@ -26,6 +26,16 @@
       %img/  
     / %input
     = f.file_field :avatar, :class => "file"
+  .col-lg-12
+    = f.fields_for :location do |l|
+      .form-group
+        = l.label :address, class: 'control-label'
+        .controls
+          = l.text_field :address, class: 'form-control', required: true
+          = l.link_to_remove "Remove this location" 
+        = f.error_span(:address)
+  .col-lg-6
+    = f.link_to_add "Add a location", :location 
   .col-lg-12
     = f.submit nil,class: 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'
