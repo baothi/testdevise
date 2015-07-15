@@ -21,7 +21,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1/edit
   def edit
     @profile = current_user.profile
-    @profile.locations.build
+    # @profile.locations.build
   end
 
   # POST /profiles
@@ -44,7 +44,7 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    respond_to do |format|
+    # respond_to do |format|
       if @profile.update(profile_params)
         if params[:profile][:avatar].present?
           redirect_to @profile, notice: 'Profile was successfully updated.'
@@ -56,7 +56,7 @@ class ProfilesController < ApplicationController
         format.html { render :edit }
         format.json { render json: @profile.errors, status: :unprocessable_entity }
       end
-    end
+    # end
   end
 
   # DELETE /profiles/1

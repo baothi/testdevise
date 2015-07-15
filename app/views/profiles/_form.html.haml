@@ -22,8 +22,12 @@
     /   = f.error_span(:avatar)
     
   .col-lg-6
-    .upload-preview.round-image-51
-      %img/  
+    .upload-preview
+      - if current_user.profile && current_user.profile.avatar
+        .round-image-51= image_tag(current_user.profile.avatar.url(:thumb))
+      -  else
+        .round-image-51
+          %img{:src => asset_path("thumb_missing.png")}/  
     / %input
     = f.file_field :avatar, :class => "file"
   .col-lg-12
