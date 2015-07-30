@@ -3,5 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-   has_one :profile
+  has_one :profile
+
+  after_create :notify_email_user_signup
+
+  private
+    def notify_email_user_signup
+      UserMailer.welcome_email(self).deliver_later	
+    end
 end

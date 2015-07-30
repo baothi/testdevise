@@ -1,3 +1,17 @@
 upload hinhf bang ajax
 trong profile co nhieu dia chi su dung nested from
 su dung seeds theo kieu nested
+phan loai user dung de quan ly admin va 1 loai user nguoi dung 
+dang ky moi thi user binh thuong
+con admin support va admin binh thuong
+admin supper duoc tao ra trong file seed
+con admin binh thuong duoc tao ra boi, moi lan khi tao cho thang admin chi can tao emmai khong tao pass khi ma admin tao moi tu dong no vo doi password
+trang quan ly tai khoan(tao mot cai comberbox load ajax khi chon thang nao)
+
+
+
+user binh thuong thiet ke database ban hang theo diem(nap tien truoc rui khi mua se bi tru)
+khi dang ky goi mot mail()
+user moi khi dang ky thi trong tai khoan no se co 10 diem
+tren trang quan ly user se hieen thi diem hien tai cua user luon
+va se co 1 link toi 1 cai pop up de admin nhap vao diem user va load diem user

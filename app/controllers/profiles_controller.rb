@@ -12,6 +12,22 @@ class ProfilesController < ApplicationController
   def show
   end
 
+  # def upload_image
+  #   @image = Image.new( image_params )
+  #   if @image.save
+  #   else
+  #     render 'image_upload_fail.js.erb'
+  #   end
+  # end
+
+  def update_image
+    @image = Profile.find_by_id( params[:avatar][:id] )
+    @image.save
+    flash[:notice]= t("promotions.image_upload_complete.upload_success")
+  end
+
+
+
   # GET /profiles/new
   def new
     @profile = Profile.new

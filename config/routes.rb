@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :locations
   get 'registrations/update'
 
   devise_for :users
-    resources :profiles
+  resources :profiles do
+    # member do
+    #   path 'update_image'
+    # end
+  end
   resources :users do
   end
   get 'home/index'

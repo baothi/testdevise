@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Testdevise
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+  = render "shared/menu"
+  .container
+    .row
+      .col-lg-9
+        = bootstrap_flash
+        = yield
+      / .col-lg-3
+      /   .well.sidebar-nav
+      /     %h3 Sidebar
+      /     %ul.nav.nav-list
+      /       %li.nav-header Sidebar
+      /       %li= link_to "Link 1", "/path1"
+      /       %li= link_to "Link 2", "/path2"
+      /       %li= link_to "Link 3", "/path3"
+      %footer
+        %p admin; Company 2015
+    = javascript_include_tag :defaults, "nested_form"
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
