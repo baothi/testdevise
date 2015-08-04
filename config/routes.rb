@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  namespace :admin do
+  get 'home_admin/index'
+  end
+
   resources :locations
   get 'registrations/update'
 
@@ -13,7 +16,23 @@ Rails.application.routes.draw do
   end
   get 'home/index'
   root 'home#index'
- 
+  
+  namespace :admin do
+    devise_for :admins, controllers: { registrations: "admins/registrations" }
+    root to: "home_admin#index"
+    # authenticate :user, lambda { |user| user.is_admin? } do
+    #  root to: "books#index"
+    #  resources :books
+    # end
+    # devise_scope :admin do
+    #   root :to => "devise/sessions#new"
+    #   get "sign_in", :to => "devise/sessions#new"
+    #   get "sign_out", :to => "devise/sessions#destroy"
+    #   get "sign_up", :to => "devise/registrations#new"
+    #   get "sign_up", :to => "devise/password#new"
+    # end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

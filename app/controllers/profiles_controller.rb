@@ -65,8 +65,8 @@ class ProfilesController < ApplicationController
         if params[:profile][:avatar].present?
           redirect_to @profile, notice: 'Profile was successfully updated.'
         else
-        format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
-        format.json { render :show, status: :ok, location: @profile }
+        redirect_to @profile, notice: 'Profile was successfully updated.'
+        # render :show, status: :ok, location: @profile
       end
       else
         format.html { render :edit }

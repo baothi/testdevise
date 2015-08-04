@@ -1,4 +1,50 @@
 - model_class = Profile
 .page-header
   %h1=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize
-= render :partial => "form"
+/ = render :partial => "form"
+= nested_form_for @profile, html: { class: "form form-horizontal profile" } do |f|
+  .col-lg-6  
+    .form-group
+      = f.label :fristname, class: 'control-label'
+      .controls
+        = f.text_field :fristname, class: 'form-control', required: true
+      = error_span(@profile[:fristname])
+    .form-group
+      = f.label :lastname, class: 'control-label'
+      .controls
+        = f.text_field :lastname, class: 'form-control', required: true
+      = error_span(@profile[:lastname])
+    .form-group
+      = f.label :brithday, class: 'control-label'
+      .controls
+        = f.datetime_select :brithday, class: 'form-control', required: true
+      = error_span(@profile[:brithday])
+    / .form-group
+    /   = f.label :avatar, class: 'control-label'
+    /   .controls
+    /     = f.file_field :avatar
+    /   = f.error_span(:avatar)
+    
+  .col-lg-6
+    .upload-preview
+      - if current_user.profile && current_user.profile.avatar
+        .round-image-51= image_tag(current_user.profile.avatar.url(:large))
+      -  else
+        .round-image-51
+          %img{:src => asset_path("thumb_missing.png")}/  
+    / %input
+    = f.file_field :avatar, :class => "file"
+  .col-lg-12
+    = f.fields_for :locations do |l|
+      .form-group
+        = l.label :address, class: 'control-label'
+        .controls
+          = l.text_field :address, class: 'form-control', required: true
+          = l.link_to_remove "Remove this location" 
+        = f.error_span(:address)
+  .col-lg-6
+    = f.link_to_add "Add a location", :locations 
+  .col-lg-12
+    = f.submit nil,class: 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), profiles_path, :class => 'btn btn-default'
+update

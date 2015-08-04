@@ -1,5 +1,6 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
+  belongs_to :admin
   has_many :locations
   mount_uploader :avatar, AvatarUploader
   accepts_nested_attributes_for :locations

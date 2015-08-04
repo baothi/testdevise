@@ -15,3 +15,10 @@ khi dang ky goi mot mail()
 user moi khi dang ky thi trong tai khoan no se co 10 diem
 tren trang quan ly user se hieen thi diem hien tai cua user luon
 va se co 1 link toi 1 cai pop up de admin nhap vao diem user va load diem user
+===================================================================
+ngay 01/07
+code lai admin ve login ,register trong phan admin cua session_controller va register_controller. Tu viet change password va email.
+set dieu kien cho supper amdin khi no dang nhap vao va admin.( minh set dieu kien thoi)
+cau hinh config mail cho mot file khac de cau hinh rui trong config minh goi no ra
+su ly jquyery khi minh chay toi dau load toi do.
+su ly jquery keo con tro toi dau thi se load toi do.
