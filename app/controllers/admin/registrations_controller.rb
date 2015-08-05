@@ -6,8 +6,11 @@ class Admin::RegistrationsController < Devise::RegistrationsController
    layout "admin"
    protected
 
-  def sign_up(resource_name, resoure)
-    # just overwrite the default one
-    # to prevent auto sign in as the new sign up
-  end
+   def after_sign_up_path_for(resource)
+      signed_in_root_path(resource)
+    end
+
+    def after_update_path_for(resource)
+      signed_in_root_path(resource)
+    end
 end
