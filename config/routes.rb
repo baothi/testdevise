@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-  get 'home_admin/index'
-  end
 
   resources :locations
   get 'registrations/update'
@@ -17,7 +14,7 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   
-  devise_for :admins, controllers: { sessions: "admin/admins/sessions" ,registrations: 'admin/admins/registrations'}
+  devise_for :admin, controllers: { sessions: "admin/sessions" ,registrations: 'admin/registrations'}
   namespace :admin do
     root to: "home_admin#index"
   end
