@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  namespace :admin do
-  get 'home_admin/index'
-  end
+  # namespace :admin do
+  #   get 'home_admin/index'
+  # end
 
   resources :locations
   get 'registrations/update'
@@ -16,21 +16,11 @@ Rails.application.routes.draw do
   end
   get 'home/index'
   root 'home#index'
-  
-  namespace :admin do
-    devise_for :admins, controllers: { registrations: "admins/registrations" }
+  resources :admins
+  devise_for :admins, controllers: {  sessions: 'admins/sessions',registrations: 'admins/registrations' }
+  namespace :admins do
+    get 'admin'  => 'admin#home_admin'
     root to: "home_admin#index"
-    # authenticate :user, lambda { |user| user.is_admin? } do
-    #  root to: "books#index"
-    #  resources :books
-    # end
-    # devise_scope :admin do
-    #   root :to => "devise/sessions#new"
-    #   get "sign_in", :to => "devise/sessions#new"
-    #   get "sign_out", :to => "devise/sessions#destroy"
-    #   get "sign_up", :to => "devise/registrations#new"
-    #   get "sign_up", :to => "devise/password#new"
-    # end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

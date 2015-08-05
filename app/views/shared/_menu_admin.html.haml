@@ -52,14 +52,14 @@
               / %span.caret
             %ul.dropdown-menu
               %li= link_to "#{current_admin.email}"
-              %li= link_to "change password", edit_admin_admin_registration_path
+              %li= link_to "change password", edit_admin_registration_path
               - if current_user.profile
                 %li= link_to "update Profile", profile_path(current_admin.profile)
               - else
                 %li= link_to "new Profile", new_profile_path
-              %li.active= link_to "Logout",destroy_admin_admin_session_path(:authenticity_token => form_authenticity_token()), :method => :delete
+              %li.active= link_to "Logout",destroy_admin_session_path(:authenticity_token => form_authenticity_token()), :method => :delete
           - else
-            %li= link_to "Login", new_admin_admin_session_path
-            %li.active= link_to "SignUp", new_admin_admin_registration_path
+            %li= link_to "Login", new_admin_session_path
+            %li.active= link_to "SignUp", new_admin_registration_path
     / /.navbar-collapse
   / /.container-fluid   edit_user_password

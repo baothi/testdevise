@@ -1,13 +1,15 @@
-class Admin::RegistrationsController < Devise::RegistrationsController
+class Admins::RegistrationsController < Devise::RegistrationsController
     # disable default no_authentication action
-  skip_before_action :require_no_authentication, only: [:new, :create, :cancel]
+  # skip_before_action :require_no_authentication, only: [:new, :create, :cancel]
   # now we need admin to register new admin
-  prepend_before_action :authenticate_scope!, only: [:new, :create, :cancel]
+  # prepend_before_action :authenticate_scope!, only: [:new, :create, :cancel]
    layout "admin"
    protected
+    def after_sign_up_path_for(resource)
+      signed_in_root_path(resource)
+    end
 
-  def sign_up(resource_name, resoure)
-    # just overwrite the default one
-    # to prevent auto sign in as the new sign up
-  end
+    def after_update_path_for(resource)
+      signed_in_root_path(resource)
+    end
 end
