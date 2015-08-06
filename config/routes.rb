@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :locations
   get 'registrations/update'
 
@@ -13,11 +14,16 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
 
+  devise_for :admins, path: 'admins', 
+    only: [:sessions, :registrations], 
+    controllers: {
+      sessions: "admins/sessions",
+      registrations: 'admins/registrations'
+    }
   resources :admins
-  devise_for :admins, controllers: {  sessions: 'admins/sessions',registrations: 'admins/registrations' }
   namespace :admins do
-    get 'admin'  => 'admin#home_admin'
-    root to: "home_admin#index"
+    get 'home/index'
+    root 'home#index'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
