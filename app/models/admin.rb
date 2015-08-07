@@ -8,6 +8,6 @@ class Admin < ActiveRecord::Base
 
   private
     def notify_email_admin_signup
-      AdminMailer.admin_mailer(self).deliver_later	
+      AdminMailer.welcome_email(self).deliver_later	
     end
 end

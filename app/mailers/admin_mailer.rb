@@ -1,6 +1,6 @@
 class AdminMailer < ApplicationMailer
   # layout 'admins/mailer/admin_mailer'
-  def admin_mailer(admin)
+  def welcome_email(admin)
     @admin = admin
     mail(to: @admin.email, subject: 'Welcome to My Awesome Site')
   end
