@@ -1,0 +1,23 @@
+%h1 Listing admin_microposts
+
+%table
+  %thead
+    %tr
+      %th Content
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_microposts.each do |admin_micropost|
+      %tr
+        %td= admin_micropost.content
+        %td= admin_micropost.user_id
+        %td= link_to 'Show', admin_micropost
+        %td= link_to 'Edit', edit_admin_micropost_path(admin_micropost)
+        %td= link_to 'Destroy', admin_micropost, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Micropost', new_admin_micropost_path

@@ -1,0 +1,21 @@
+%header.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    = link_to "sample app", admin_root_path, id: "logo"
+    %nav
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to "Home", admin_root_path
+        %li= link_to "Help", admin_help_path
+        - if logged_in?
+          %li= link_to "Admins", admin_admins_path
+          %li.dropdown
+            %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+              Account
+              %b.caret
+            %ul.dropdown-menu
+              %li= link_to "Profile", current_user
+              / %li= link_to "Settings", edit_admin_path(current_user)
+              %li.divider
+              %li
+                = link_to "Log out", admin_logout_path, method: "delete"
+        - else
+          %li= link_to "Log in", admin_login_path

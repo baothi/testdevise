@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+  get 'sessions/new'
+  end
+
+  namespace :admin do
+    resources :admins
+    root             'admin/admins#index'
+    get 'help'    => 'static_pages#help'
+    get 'about'   => 'static_pages#about'
+    get 'contact' => 'static_pages#contact'
+    get 'signup'  => 'admins#new'
+    get    'login'   => 'sessions#new'
+    post   'login'   => 'sessions#create'
+    delete 'logout'  => 'sessions#destroy'
+    resources :microposts
+  end
   resources :locations
   get 'registrations/update'
 
@@ -14,17 +30,17 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
 
-  devise_for :admins, path: 'admins', 
-    only: [:sessions, :registrations], 
-    controllers: {
-      sessions: "admins/sessions",
-      registrations: 'admins/registrations'
-    }
-  resources :admins
-  namespace :admins do
-    get 'home/index'
-    root 'home#index'
-  end
+  # devise_for :admins, path: 'admins', 
+  #   only: [:sessions, :registrations], 
+  #   controllers: {
+  #     sessions: "admins/sessions",
+  #     registrations: 'admins/registrations'
+  #   }
+  # resources :admins
+  # namespace :admins do
+  #   get 'home/index'
+  #   root 'home#index'
+  # end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

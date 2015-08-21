@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @admin_micropost.content
+%p
+  %b User:
+  = @admin_micropost.user_id
+
+= link_to 'Edit', edit_admin_micropost_path(@admin_micropost)
+\|
+= link_to 'Back', admin_microposts_path
