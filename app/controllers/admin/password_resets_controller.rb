@@ -1,7 +1,7 @@
 class Admin::PasswordResetsController < ApplicationController
   layout 'admin'
-  before_action :get_admin,   only: [:edit, :update]
-  before_action :valid_admin, only: [:edit, :update]
+  before_action :get_admin,        only: [:edit, :update]
+  before_action :valid_admin,      only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
 
   def new
@@ -51,7 +51,7 @@ class Admin::PasswordResetsController < ApplicationController
     def valid_admin
       unless (@admin_admin && @admin_admin.activated? &&
               @admin_admin.authenticated?(:reset, params[:id]))
-        redirect_to admin_admin
+        redirect_to admin_root_url
       end
     end
     
