@@ -3,11 +3,6 @@ module Admin::SessionsHelper
   def log_in(admin_admin)
     session[:admin_admin_id] = admin_admin.id
   end
-  
-  # Returns true if the user is logged in, false otherwise.
-  def logged_in?
-    !current_user.nil?
-  end
 
   def remember(admin_admin)
     admin_admin.remember
@@ -40,7 +35,7 @@ module Admin::SessionsHelper
 
   # Forgets a persistent session.
   def forget(admin_admin)
-    admin_admin.forget
+    # admin_admin.forget
     cookies.delete(:admin_admin_id)
     cookies.delete(:remember_token)
   end

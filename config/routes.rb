@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
   namespace :admin do
-  get 'sessions/new'
-  end
-
-  namespace :admin do
     resources :admins
     root             'admin/admins#index'
     get 'help'    => 'static_pages#help'
@@ -14,7 +10,10 @@ Rails.application.routes.draw do
     get    'login'   => 'sessions#new'
     post   'login'   => 'sessions#create'
     delete 'logout'  => 'sessions#destroy'
+    get 'sessions/new'
     resources :microposts
+    resources :account_activations, only: [:edit]
+    resources :password_resets,     only: [:new, :create, :edit, :update]
   end
   resources :locations
   get 'registrations/update'

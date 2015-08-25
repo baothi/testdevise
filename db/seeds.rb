@@ -59,10 +59,10 @@
 # #  Location.create(address: address, profile_id: profile_id)
 # # end
 
-User.create!(name:  "Example User",
+Admin::Admin.create!(name:  "Example User",
              email: "example@gmail.com",
              password:              "foobar",
-             password_confirmation: "foobar")
-             # admin:     true,
-             # activated: true,
-             # activated_at: Time.zone.now)
+             password_confirmation: "foobar",
+             admin:     true,
+             activated: true,
+             activated_at: Time.zone.now)

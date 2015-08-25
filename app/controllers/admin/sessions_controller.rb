@@ -6,16 +6,16 @@ class Admin::SessionsController < ApplicationController
   def create
     admin_admin = Admin::Admin.find_by(email: params[:session][:email].downcase)
     if admin_admin && admin_admin.authenticate(params[:session][:password])
-    #   if user.activated?
+      if admin_admin.activated?
         log_in admin_admin
         params[:session][:remember_me] == '1' ? remember(admin_admin) : forget(admin_admin)
         redirect_back_or admin_admin
-    #   else
-    #     message  = "Account not activated. "
-    #     message += "Check your email for the activation link."
-    #     flash[:warning] = message
-    #     redirect_to root_url
-    #   end
+      else
+        message  = "Account not activated. "
+        message += "Check your email for the activation link."
+        flash[:warning] = message
+        redirect_to admin_admin
+      end
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'

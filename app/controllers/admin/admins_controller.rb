@@ -1,7 +1,9 @@
 class Admin::AdminsController < ApplicationController
   layout 'admin'
-  before_action :logged_in_admin, only: [:index, :edit, :update]
+  before_action :logged_in_admin, only: [:index, :edit, :update, :destroy]
   before_action :correct_admin,   only: [:edit, :update]
+  before_action :admin_user,     only: :destroy
+
   def index
     @admin_admins = Admin::Admin.all
   end
@@ -21,12 +23,13 @@ class Admin::AdminsController < ApplicationController
   def create
     # debugger
     @admin_admin = Admin::Admin.new(admin_admin_params)
+    @admin_admin.password = '123456'
+    @admin_admin.password_confirmation = '123456'
     if @admin_admin.save
-      # @admin_admins.activated = true
-      # @admin_admins.create_reset_digest
-      # @admin_admins.send_password_reset_email
-      # @user.send_activation_email
-      log_in @admin_admin
+      @admin_admin.activated = true
+      @admin_admin.create_reset_digest
+      @admin_admin.send_password_reset_email
+
       flash[:info] = "Please check your email to activate your account."
       redirect_to admin_admins_path
 

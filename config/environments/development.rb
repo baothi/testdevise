@@ -56,8 +56,8 @@ Rails.application.configure do
 
    #Paperclip.options[:command_path] = "/usr/bin/"
   config.action_mailer.default :charset => "utf-8"
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.perform_deliveries = true
   # config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
+  #config.action_mailer.default :charset => "utf-8"
 end
