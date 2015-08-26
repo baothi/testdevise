@@ -24,7 +24,7 @@ tes
 config/s3.yml
 config/database.yml
 config/application.yml
-
+/config/initializers/app_env_vars.rb
 /bin/rsa
 /bin/cert
 
